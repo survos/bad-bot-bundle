@@ -11,7 +11,6 @@ class ExceptionListener
 {
     public function __invoke(ExceptionEvent $event): void
     {
-        dd($event);
         // You get the exception object from the received event
         $exception = $event->getThrowable();
         $message = sprintf(

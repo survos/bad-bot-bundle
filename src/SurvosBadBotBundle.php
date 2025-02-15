@@ -4,6 +4,7 @@ namespace Survos\BadBotBundle;
 
 use Survos\BadBotBundle\EventListener\BeforeRequestListener;
 use Survos\BadBotBundle\EventListener\ExceptionListener;
+use Survos\BadBotBundle\Service\BotService;
 use Survos\KeyValueBundle\Type\DefaultType;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -21,7 +22,8 @@ class SurvosBadBotBundle extends AbstractBundle
             ->setAutoconfigured(true)
             ->setAutowired(true),
             [
-//                ExceptionListener::class,
+                BotService::class,
+                ExceptionListener::class,
                 BeforeRequestListener::class]);
     }
 
