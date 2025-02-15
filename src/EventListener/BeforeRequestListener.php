@@ -37,12 +37,6 @@ class BeforeRequestListener
     }
 
 
-    #[AsEventListener(NotFoundHttpException::class)]
-    public function onError(NotFoundHttpException $event): void
-    {
-        dd($event);
-    }
-
     #[AsEventListener(ExceptionEvent::class, priority: 10000)]
     public function onKernelException(ExceptionEvent $event): void
     {
@@ -59,7 +53,6 @@ class BeforeRequestListener
             }
 
         }
-
     }
     #[AsEventListener(RequestEvent::class, priority: 10000)]
     public function onKernelRequest(RequestEvent $event): void
