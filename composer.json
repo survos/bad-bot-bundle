@@ -1,33 +1,37 @@
 {
     "name": "survos/bad-bot-bundle",
-    "description": "Bundle to track and block bots that are probing the site",
-    "type": "symfony-bundle",
-    "license": "MIT",
+    "description": "Bundle to track and block bots that are probing the site, @todo: event",
+    "keywords": [
+        "blacklist",
+        "bundle",
+        "symfony",
+        "bot",
+        "blocker"
+    ],
     "homepage": "https://github.com/survos/SurvosBadBotBundle",
-    "keywords": ["blacklist", "bundle", "symfony", "bot", "blocker"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Tac Tacelosky",
             "email": "tacman@gmail.com"
         }
     ],
+    "type": "symfony-bundle",
     "require": {
-        "php": "^8.3",
+        "php": "^8.4",
         "symfony/config": "^7.3",
         "symfony/dependency-injection": "^7.3",
-        "symfony/http-kernel": "^7.3",
-        "survos/key-value-bundle": "*"
+        "symfony/http-kernel": "^7.3"
     },
     "require-dev": {
         "symfony/yaml": "^7.3",
-        "doctrine/doctrine-bundle": "^2.13",
-        "doctrine/orm": "^3.0",
+        "doctrine/doctrine-bundle": "^2.7",
+        "doctrine/orm": "^2.12 || ^3.3",
         "symfony/phpunit-bridge": "^7.3",
-        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan": "^2.0",
         "rector/rector": "^2.0",
         "inspector-apm/inspector-symfony": "^1.8"
     },
-    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Survos\\BadBotBundle\\": "src/"
@@ -38,7 +42,6 @@
             "Survos\\BadBotBundle\\Tests\\": "/tests/"
         }
     },
-
     "scripts": {
         "coverage": "@phpunit-base --coverage-html html --colors ",
         "cs-check": "mkdir -p var/cache && php-cs-fixer fix --dry-run --diff --cache-file=var/cache/.php_cs.cache",
@@ -50,11 +53,11 @@
         "phpunit-coverage-text": "@phpunit-base --coverage-text --colors=never",
         "show-coverage": "php -S localhost:9004 -t=html"
     },
-
-    "prefer-stable": true,
     "config": {
         "allow-plugins": {
             "endroid/installer": true
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
