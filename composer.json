@@ -18,16 +18,16 @@
     ],
     "type": "symfony-bundle",
     "require": {
-        "php": "^8.4",
-        "symfony/config": "^7.3||^8.0",
-        "symfony/dependency-injection": "^7.3||^8.0",
-        "symfony/http-kernel": "^7.3||^8.0"
+        "php": "^8.5",
+        "symfony/config": "^8.1",
+        "symfony/dependency-injection": "^8.1",
+        "symfony/http-kernel": "^8.1"
     },
     "require-dev": {
-        "symfony/yaml": "^7.3||^8.0",
+        "symfony/yaml": "^8.1",
         "doctrine/doctrine-bundle": "^2.7|^3.0",
         "doctrine/orm": "^2.12 || ^3.3",
-        "symfony/phpunit-bridge": "^7.3||^8.0",
+        "symfony/phpunit-bridge": "^8.1",
         "phpstan/phpstan": "^2.0",
         "rector/rector": "^2.0",
         "inspector-apm/inspector-symfony": "^1.8"
