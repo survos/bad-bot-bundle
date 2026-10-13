@@ -1,6 +1,9 @@
 <?php
 
+declare(strict_types=1);
+
 // src/EventListener/ExceptionListener.php
+
 namespace Survos\BadBotBundle\EventListener;
 
 use Symfony\Component\HttpFoundation\Response;
